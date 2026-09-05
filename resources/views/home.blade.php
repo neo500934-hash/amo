@@ -25,3 +25,17 @@
         </div>
     </div>
 @endsection
+
+@if (session('swal_login_success'))
+    @section('adminlte_js')
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Welcome back!',
+                text: 'You have signed in successfully.',
+                timer: 2000,
+                showConfirmButton: false,
+            });
+        </script>
+    @endsection
+@endif

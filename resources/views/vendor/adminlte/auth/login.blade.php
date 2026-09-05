@@ -22,8 +22,7 @@
         <label for="email" class="visually-hidden">{{ __('adminlte::adminlte.email') }}</label>
 
         <div class="input-group mb-3">
-            <input type="email" name="email" id="email"
-                class="form-control @error('email') is-invalid @enderror"
+            <input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror"
                 value="{{ old('email') }}" placeholder="{{ __('adminlte::adminlte.email') }}" autofocus>
 
             <div class="input-group-text">
@@ -60,8 +59,8 @@
         <div class="row">
             <div class="col-7">
                 <div class="form-check" title="{{ __('adminlte::adminlte.remember_me_hint') }}">
-                    <input class="form-check-input" type="checkbox" name="remember"
-                           id="remember" {{ old('remember') ? 'checked' : '' }}>
+                    <input class="form-check-input" type="checkbox" name="remember" id="remember"
+                        {{ old('remember') ? 'checked' : '' }}>
                     <label class="form-check-label" for="remember">
                         {{ __('adminlte::adminlte.remember_me') }}
                     </label>
@@ -78,12 +77,12 @@
             </div>
         </div>
     </form>
-@include('adminlte::auth.social-links', ['fallbackText' => __('adminlte::adminlte.sign_in')])
+    @include('adminlte::auth.social-links', ['fallbackText' => __('adminlte::adminlte.sign_in')])
 @stop
 
 @section('auth_footer')
     {{-- Password reset link --}}
-    @if($passResetUrl)
+    @if ($passResetUrl)
         <p class="my-0">
             <a href="{{ $passResetUrl }}">
                 {{ __('adminlte::adminlte.i_forgot_my_password') }}
@@ -92,11 +91,11 @@
     @endif
 
     {{-- Register link --}}
-    @if($registerUrl)
+    {{-- @if ($registerUrl)
         <p class="my-0">
             <a href="{{ $registerUrl }}">
                 {{ __('adminlte::adminlte.register_a_new_membership') }}
             </a>
         </p>
-    @endif
+    @endif --}}
 @stop

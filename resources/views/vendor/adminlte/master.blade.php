@@ -338,6 +338,22 @@
     {{-- Extra Configured Plugins Scripts --}}
     @include('adminlte::plugins', ['type' => 'js'])
 
+    {{-- Notyf / AOS initialization --}}
+    <script>
+        window._AdminLTE_Ready(function () {
+            if (typeof Notyf !== 'undefined') {
+                window.notyf = new Notyf({
+                    duration: 4000,
+                    position: { x: 'right', y: 'top' },
+                });
+            }
+
+            if (typeof AOS !== 'undefined') {
+                AOS.init();
+            }
+        });
+    </script>
+
     {{-- Livewire Script --}}
     @if(config('adminlte.livewire'))
         @livewireScripts

@@ -24,11 +24,9 @@
 @section('body')
     <main class="{{ $authType }}-box">
 
-        {{-- Logo --}}
-        <h1 class="{{ $authType }}-logo">
+        {{-- <h1 class="{{ $authType }}-logo">
             <a href="{{ $dashboardUrl }}">
 
-                {{-- Logo Image --}}
                 @if (config('adminlte.auth_logo.enabled', false))
                     <img src="{{ asset(config('adminlte.auth_logo.img.path')) }}"
                          alt="{{ config('adminlte.auth_logo.img.alt') }}"
@@ -46,11 +44,10 @@
                          alt="{{ config('adminlte.logo_img_alt') }}" height="50">
                 @endif
 
-                {{-- Logo Label --}}
                 {!! config('adminlte.logo', '<b>Admin</b>LTE') !!}
 
             </a>
-        </h1>
+        </h1> --}}
 
         {{-- Card Box --}}
         <div class="card {{ config('adminlte.classes_auth_card', 'card-outline card-primary') }}">

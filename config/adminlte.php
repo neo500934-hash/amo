@@ -392,8 +392,8 @@ return [
 
     'color_mode' => [
         'enabled' => true,
-        'default' => 'auto',
-        'remember' => true,
+        'default' => 'light',
+        'remember' => false,
         'no_flash_script' => true,
 
         // Register the color mode routes of the package (the server side dark
@@ -1095,6 +1095,58 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js',
+                ],
+            ],
+        ],
+
+        // Notyf: lightweight toast notifications. Exposes a global `notyf`
+        // instance, e.g. `notyf.success('Saved!')` / `notyf.error('Oops')`.
+
+        'Notyf' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/notyf@3/notyf.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/notyf@3/notyf.min.js',
+                ],
+            ],
+        ],
+
+        // SweetAlert2: styled confirm/alert dialogs. Exposes the global `Swal`,
+        // e.g. `Swal.fire('Done!')`.
+
+        'SweetAlert2' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@11',
+                ],
+            ],
+        ],
+
+        // AOS (Animate On Scroll): scroll-triggered animations via
+        // `data-aos="fade-up"` attributes on elements.
+
+        'Aos' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js',
                 ],
             ],
         ],
