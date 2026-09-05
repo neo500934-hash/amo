@@ -5,3 +5,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Add ['verify' => true] when the application uses the email verification of
+// Laravel: the 'verify' view of this package posts to the 'verification.resend'
+// route, which 'Auth::routes()' only registers with that option.
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
